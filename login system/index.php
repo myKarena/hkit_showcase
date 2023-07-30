@@ -15,10 +15,13 @@ if(isset($_POST['submit'])){
 
    $result = mysqli_query($conn, $select);
 
+
    if(mysqli_num_rows($result) > 0){
     
       $row = mysqli_fetch_array($result);
 
+      // admin or student page
+      
       if($row['user_type'] == 'admin'){
 
          $_SESSION['admin_name'] = $row['username'];
