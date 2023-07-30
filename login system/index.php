@@ -4,6 +4,8 @@
 
 session_start();
 
+//check username and password
+
 if(isset($_POST['submit'])){
 
    $username =  $_POST['username'];
